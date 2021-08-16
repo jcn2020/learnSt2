@@ -52,6 +52,26 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 #### rule
   * > st2 rule list --pack=core
 
+#### policy
+  * > concurrency  # max instance can run concurrently
+  policy_type: action.concurrency
+  parameters:
+    action: delay
+    threshold: 10
+
+  policy_type: action.concurrency
+  parameters:
+     action: cancel
+     threshold: 1
+  * > concurrency.attr  # further constraint to an action attribute
+ policy_type: action.concurrency.attr
+ parameters:
+     action: delay
+     threshold: 10
+     attributes:
+         - hostname
+
+
 #### deployment
   * > sudo  cp -r  /usr/share/doc/st2/examples   /opt/stackstorm/packs
   * > sudo  chown  -R  root:st2packs  /opt/stackstorm/packs/examples
@@ -83,5 +103,6 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 ####  Create and install pack
 * >  create a repo
 * >  populate actions, rules, triggers, workflow
-* > st2 pack install file://$CWD
-* > st2 pack install https://github.com/jcn2020/learnStackStorm.git
+* >  st2 pack install file://$CWD
+* >  st2 pack install https://github.com/jcn2020/learnStackStorm.git 
+* >  st2ctl reload --register-all
