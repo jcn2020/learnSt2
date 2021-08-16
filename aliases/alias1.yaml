@@ -2,6 +2,6 @@
 name: greet
 pack: learn_stackstorm
 description: "Greet StackStorm"
-action_ref: "hello_st2.greet"
+action_ref: "learn_stackstorm.greet"
 formats:
   - "greet {{greeting}}"
