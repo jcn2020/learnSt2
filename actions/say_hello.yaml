@@ -1,0 +1,16 @@
+---
+name: say_hello
+pack: learn_stackstorm
+description: simple hello world
+enabled: true
+
+runner_type: "local-shell-script"
+entry_point: ../artifacts/say_hello.sh
+
+parameters:
+  greetings:
+    type: string
+    required: true
+    default: "Hello there "
+    description: Simple greeting
+    position: 1
