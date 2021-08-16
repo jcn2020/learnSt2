@@ -7,4 +7,4 @@ resource_ref: hello_st2.greet
 policy_type: action.concurrency
 parameters:
     action: cancel # if more than threshold, will cancel
-    threshold: 10
+    threshold: 1
