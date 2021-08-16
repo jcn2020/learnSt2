@@ -3,9 +3,9 @@ name: greet.retry
 pack: learn_stackstorm
 description: retry the executions of the greet action.
 enabled: true
-resource_ref: hello_st2.greet
+resource_ref: learn_stackstorm.greet
 policy_type: action.retry
 parameters:
-    retry_on: timeout`
+    retry_on: timeout
     max_retry_count: 2
     delay: 2
