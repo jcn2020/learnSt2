@@ -5,7 +5,7 @@ description: simple hello world
 enabled: true
 
 runner_type: "local-shell-script"
-entry_point: ../artifacts/say_hello.sh
+entry_point: say_hello.sh
 
 parameters:
   greetings:

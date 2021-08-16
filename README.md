@@ -78,3 +78,10 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 #### Datastore
 * > st2 key list 
 * > st2 key set user stanley
+
+
+####  Create and install pack
+* >  create a repo
+* >  populate actions, rules, triggers, workflow
+* > st2 pack install file://$CWD
+* > st2 pack install https://github.com/jcn2020/learnStackStorm.git
