@@ -1,6 +1,6 @@
 ---
 name: greet
-pack: hello_st2
+pack: learn_stackstorm
 description: "Greet StackStorm"
 action_ref: "hello_st2.greet"
 formats:
