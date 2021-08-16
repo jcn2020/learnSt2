@@ -27,6 +27,7 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 
 ### Reload configuration 
 * st2ctl reload --register-configs
+* st2ctl reload --register-all
 
 ### sample commands - 
 * check for core package and run some commands 
