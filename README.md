@@ -5,6 +5,7 @@ Learn StackStorm
 * Install and configure - https://docs.stackstorm.com/install/index.html
 
 * to login
+  * > ssh jnguyen@>xx.xx.xx.xx
   * > st2 login st2admin <st2admin>
 
 * to get token 
@@ -52,7 +53,7 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 #### rule
   * > st2 rule list --pack=core
 
-#### policy
+#### policy  <=== concurrent or retry
   * > concurrency  # max instance can run concurrently
   policy_type: action.concurrency
   parameters:
@@ -103,6 +104,10 @@ logging.auth.conf          logging.sensorcontainer.conf   syslog.actionrunner.co
 ####  Create and install pack
 * >  create a repo
 * >  populate actions, rules, triggers, workflow
+* >  (st2 pack remove <packName> )
 * >  st2 pack install file://$CWD
 * >  st2 pack install https://github.com/jcn2020/learnStackStorm.git 
 * >  st2ctl reload --register-all
+
+* >  st2 run learn_stackstorm.say_hello greetings="howdy"
+
