@@ -23,8 +23,9 @@ Learn StackStorm
 * Get log file and status 
   > st2 execution list ; st2 execution get xxxxx
 * Remove a pack
-  > * to get token 
-  * > st2 auth st2admin -p "st2admin"
+  > st2 pack remove learn_stackstorm
+* to get token 
+  > st2 auth st2admin -p "st2admin"
 * > docker-compose down 
 
 
