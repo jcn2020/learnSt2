@@ -1,0 +1,18 @@
+---
+version: 1.0
+description: available vars 
+
+intput:
+  - name
+
+vars:
+  - location: "never used"
+
+output: 
+  - myLocation: name
+
+tasks:
+  diplay_vars:
+    action: core.echo
+    intput:
+      message: <% ctx().name %> 
