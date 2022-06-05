@@ -1,6 +1,6 @@
 ---
 name: greet.retry
-pack: learn_stackstorm
+pack: learnst2
 description: retry the executions of the greet action.
 enabled: true
 resource_ref: learn_stackstorm.greet

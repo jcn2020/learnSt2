@@ -1,6 +1,6 @@
 ---
 name: greet.concurrency
-pack: learn_stackstorm
+pack: learnst2
 description: Limits the concurrent executions of the greet action.
 enabled: true
 resource_ref: learn_stackstorm.greet
