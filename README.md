@@ -1,8 +1,28 @@
 ## learnStackStorm
 Learn StackStorm
 
+### setup a ubuntu 20.04 ... 
+* goto portal.azure.com ==> create VM ==> East US2 
+
+### Create a docker instance 
+* Install and configure - [https://docs.stackstorm.com/install/index.html](https://docs.stackstorm.com/install/docker.html)
+* > git clone https://github.com/stackstorm/st2-docker
+* > cd st2-docker
+* > docker-compose up -d
+* > docker-compose exec st2action bash ==> cd /root ==> ssh-keygen (accept all) ==> copy .pub public key ==> gren to git in next step
+* giving git access ==>  https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> past .pub from previous step.
+* now ready to install 
+* > docker-compose exec st2client bash
+* > st2 login st2admin -p "Ch@ngeMe" 
+* ssh > st2 pack install git@github.com:jcn2020/learnStackStorm 
+* > st2 action execute learn_stackstorm.say_hello
+* > st2 execution list ; st2 execution get xxxxx
+* > docker-compose down 
+
+
 ### Setup a local stackstorm instance. 
 * Install and configure - https://docs.stackstorm.com/install/index.html
+* Example here using docker build
 
 * to login
   * > ssh jnguyen@>xx.xx.xx.xx
