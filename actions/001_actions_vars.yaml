@@ -10,6 +10,6 @@ runner_type: orquesta
 parameters:
   name:
     type: "string"
-    required: "yes"
-    secret: "no"
+    required: true
+    secret: true
     default: "anything goes for now"
