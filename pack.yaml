@@ -1,10 +1,10 @@
 ---
 # Pack reference. It can only contain lowercase letters, digits and underscores.
 # This attribute is only needed if "name" attribute contains special characters.
-ref: learn_stackstorm
+ref: learnst2
 # User-friendly pack name. If this attribute contains spaces or any other special characters, then
 # the "ref" attribute must also be specified (see above).
-name: Learn_StackStorm
+name: learnst2
 # User-friendly pack description.
 description: Simple tutorial pack for learning
 # Keywords which are used when searching for packs.
