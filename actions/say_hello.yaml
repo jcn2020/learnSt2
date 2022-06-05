@@ -11,6 +11,6 @@ parameters:
   greetings:
     type: string
     required: true
-    default: "Hello there "
+    default: "Hello there .... "
     description: Simple greeting
     position: 1
