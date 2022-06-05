@@ -4,7 +4,7 @@ Learn StackStorm
 ### setup a ubuntu 20.04 ... 
 * goto portal.azure.com ==> create VM ==> East US2 
 
-### Create a docker instance 
+### Install and remove pack on new Docker instance.
 * Install and configure - [https://docs.stackstorm.com/install/index.html](https://docs.stackstorm.com/install/docker.html)
 * > git clone https://github.com/stackstorm/st2-docker
 * > cd st2-docker
@@ -14,9 +14,17 @@ Learn StackStorm
 * now ready to install 
 * > docker-compose exec st2client bash
 * > st2 login st2admin -p "Ch@ngeMe" 
-* ssh > st2 pack install git@github.com:jcn2020/learnStackStorm 
-* > st2 action execute learn_stackstorm.say_hello
-* > st2 execution list ; st2 execution get xxxxx
+* to get token 
+* > st2 auth st2admin -p "st2admin"
+* Install Pack 
+  > st2 pack install git@github.com:jcn2020/learnStackStorm 
+* Execute an action 
+  > st2 action execute learn_stackstorm.say_hello 
+* Get log file and status 
+  > st2 execution list ; st2 execution get xxxxx
+* Remove a pack
+  > * to get token 
+  * > st2 auth st2admin -p "st2admin"
 * > docker-compose down 
 
 
