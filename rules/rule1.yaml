@@ -4,8 +4,8 @@ pack: learnst2
 description: Sample rule firing on hello_st2.event1.
 enabled: true
 trigger:
-    type: learn_stackstorm.event1
+    type: learnst2.event1
 action:
-    ref: learn_stackstorm.greet
+    ref: learnst2.greet
     parameters:
         greeting: Yo
