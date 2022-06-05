@@ -1,6 +1,6 @@
 ---
 name: say_hello
-pack: learnSt2
+pack: learnst2
 description: simple hello world
 enabled: true
 
