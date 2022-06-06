@@ -9,7 +9,7 @@ vars:
   - location: "never used"
 
 output: 
-  - myLocation: name
+  - myLocation: <% ctx().name %>
 
 tasks:
   diplay_vars:
