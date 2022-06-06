@@ -5,6 +5,12 @@ Learn StackStorm
 * goto portal.azure.com ==> create VM ==> East US2 
 * pac
 
+### pack manage
+* packs/packname/config.schema.yaml ==>  what are needed to config pack before use
+* configs/packname.yaml  ==> provide the value as required in config.schema.yaml
+* overrides/_global.yaml ==> topdown overrides out of the gate
+* overrides/packname.yaml ==>  exception to _global.yaml
+
 ### Install and remove pack on new Docker instance.
 * Install and configure - [https://docs.stackstorm.com/install/index.html](https://docs.stackstorm.com/install/docker.html)
 * > git clone https://github.com/stackstorm/st2-docker
