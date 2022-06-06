@@ -3,6 +3,7 @@ Learn StackStorm
 
 ### setup a ubuntu 20.04 ... 
 * goto portal.azure.com ==> create VM ==> East US2 
+* pac
 
 ### Install and remove pack on new Docker instance.
 * Install and configure - [https://docs.stackstorm.com/install/index.html](https://docs.stackstorm.com/install/docker.html)
@@ -10,14 +11,15 @@ Learn StackStorm
 * > cd st2-docker
 * > docker-compose up -d
 * > docker-compose exec st2action bash ==> cd /root ==> ssh-keygen (accept all) ==> copy .pub public key ==> gren to git in next step
-* giving git access ==>  https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> past .pub from previous step.
+* giving git access ==>  https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> paste .pub from previous step.
 * now ready to install 
 * > docker-compose exec st2client bash
 * > st2 login st2admin -p "Ch@ngeMe" 
 * to get token 
 * > st2 auth st2admin -p "st2admin"
 * Install Pack 
-  > st2 pack install git@github.com:jcn2020/learnStackStorm 
+  > st2 pack install git@github.com:jcn2020/learnSt2 
+  > st2 pack install https://jcn2020:<PATtoken>@github.com/jcn2020/learnSt2.git
 * Execute an action 
   > st2 action execute learn_stackstorm.say_hello 
 * Get log file and status 
@@ -27,6 +29,39 @@ Learn StackStorm
 * to get token 
   > st2 auth st2admin -p "st2admin"
 * > docker-compose down 
+
+### s2ctl commands
+* st2ctl {start, stop, restart, status}
+  * > sudo st2ctl start
+* st2ctl {restart-component}
+  * component =  st2actionrunner st2api st2stream st2auth st2garbagecollector st2notifier st2rulesengine st2sensorcontainer st2chatops st2timersengine st2workflowengine st2scheduler
+* st2ctl {reload, clean}
+  * > sudo st2ctl reload --register-all --verbose
+### Basic Stackstorm locations 
+* /opt/stackstorm
+  * packs: "all packs".  st2ctl will look into this first.  then search for path in pack_base_paths in /etc/st2/st2.conf
+  * configs: "pack configuration"
+  * st2: 
+  * rbac:
+  * virtualenvs:  for python as part of pip -r requirements.txt
+  * overrides: override resource. eg: sensor: { defaults: {enabled: false} }, actions: { defaults: {enabled: false}}, 
+    * /_global.yaml: default state of a particular resource type: sensors, actions, aliases, rules
+      * { defaults: {enabled: false} }, actions: { defaults: {enabled: false}}, 
+    * /<packagename>.yaml 
+      * actions: { defaults: {enabled: false}} , {exceptions: myaction1: {enabled: true}} }
+* /etc/st2: 
+  * st2.conf: config for st2 
+  * keys
+  
+  * sudo st2ctl reload 
+### shared pack library
+* https://exchange.stackstorm.org/
+  * > st2 pack search core
+  * > st2 pack show core
+  * > st2 pack install github
+  * > st2 pack install st2 pack install git@github.com/jcn2020/learnStackStorm=dev
+  * > st2 pack install st2 pack install git@github.com/jcn2020/learnStackStorm=<hash>
+  * > sudo st2ctl reload --register-configs
 
 
 ### Setup a local stackstorm instance. 
