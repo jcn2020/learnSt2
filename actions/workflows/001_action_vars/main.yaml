@@ -14,5 +14,5 @@ output:
 tasks:
   diplay_vars:
     action: core.echo
-    intput:
+    input:
       message: <% ctx().name %> 
