@@ -3,7 +3,7 @@ Learn StackStorm
 
 ### setup a ubuntu 20.04 ... 
 * goto portal.azure.com ==> create VM ==> East US2 
-* pac
+* install docker ub20.04 docs.docker.com
 
 ### pack manage
 * packs/packname/config.schema.yaml ==>  what are needed to config pack before use
@@ -16,7 +16,7 @@ Learn StackStorm
 * > git clone https://github.com/stackstorm/st2-docker
 * > cd st2-docker
 * > docker-compose up -d
-* > docker-compose exec st2action bash ==> cd /root ==> ssh-keygen (accept all) ==> copy .pub public key ==> gren to git in next step
+* > docker-compose exec st2actionrunner bash ==> cd /root ==> ssh-keygen (accept all) ==> copy .pub public key ==> gren to git in next step
 * giving git access ==>  https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> paste .pub from previous step.
 * now ready to install 
 * > docker-compose exec st2client bash
