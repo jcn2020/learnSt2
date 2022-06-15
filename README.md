@@ -16,8 +16,13 @@ Learn StackStorm
 * > git clone https://github.com/stackstorm/st2-docker
 * > cd st2-docker
 * > docker-compose up -d
-* > docker-compose exec st2actionrunner bash ==> cd /root ==> ssh-keygen (accept all) ==> copy .pub public key ==> gren to git in next step
-* giving git access ==>  https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> paste .pub from previous step.
+* > docker-compose exec st2actionrunner bash 
+  * IMPORTANTE - (need to run as root or just copy sshkey to /root/.ssh/)
+  * ==> sudo -i ==>  cd /root ==> ssh-keygen (accept all) 
+  * ==> copy .pub public key ==> gren to git in next step
+
+Need to create ssh and allow st2 to sync code from github 
+* https://github.com/jcn2020/learnStackStorm ==> setting ==> deployKey ==> add new ==> paste .pub from previous step.
 * now ready to install 
 * > docker-compose exec st2client bash
 * > st2 login st2admin -p "Ch@ngeMe" 
