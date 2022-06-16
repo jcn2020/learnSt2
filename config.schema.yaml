@@ -1,0 +1,5 @@
+---
+  config_schema_name:
+    description: "config.schema name"
+    type: string
+    required: true
