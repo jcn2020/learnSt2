@@ -11,5 +11,5 @@ parameters:
   name:
     type: "string"
     required: true
-    secret: true
+    secret: false
     default: "anything goes for now"

@@ -1,5 +1,18 @@
 ---
-  config_schema_name:
-    description: "config.schema name"
-    type: string
-    required: true
+api_key:
+  type: "string"
+  required: true
+  description: "API Key"
+api_secret:
+  type: "string"
+  required: true
+  secret: true
+region:
+  type: "string"
+  required: true
+  default: "us-east-1"
+  description: "API region to use"
+private_key_path:
+  type: "string"
+  required: false
+  description: "Path to the private key file to use"

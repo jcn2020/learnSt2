@@ -2,17 +2,17 @@
 version: 1.0
 description: available vars 
 
-intput:
+input:
   - name
 
 vars:
   - location: "never used"
 
 output: 
-  - myLocation: name
+  - myLocation: <% ctx().name %>
 
 tasks:
   diplay_vars:
     action: core.echo
-    intput:
+    input:
       message: <% ctx().name %> 
