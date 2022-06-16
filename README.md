@@ -18,6 +18,7 @@ Learn StackStorm
 * > docker-compose up -d
 * > docker-compose exec st2actionrunner bash 
   * IMPORTANTE - (need to run as root or just copy sshkey to /root/.ssh/)
+  * ==>  check:  sshkey need to be owned by the user -- NOT root
   * ==> sudo -i ==>  cd /root ==> ssh-keygen (accept all) 
   * ==> copy .pub public key ==> gren to git in next step
 
