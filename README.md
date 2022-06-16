@@ -3,7 +3,12 @@ Learn StackStorm
 
 ### setup a ubuntu 20.04 ... 
 * goto portal.azure.com ==> create VM ==> East US2 
+  * > Network - static IP ; open port 8080, 9100, 9101, 9102 for st2web
+  * > sudo apt update ; sudo apt upgrade ; sudo apt install net-tools
+  * > bash <(curl -sSL https://stackstorm.com/packages/install.sh) --user=st2admin --password=ChangeMe
+  * 
 * install docker ub20.04 docs.docker.com
+  
 
 ### pack manage
 * packs/packname/config.schema.yaml ==>  what are needed to config pack before use
