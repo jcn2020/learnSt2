@@ -17,7 +17,7 @@ Learn StackStorm
 * > cd st2-docker
 * > docker-compose up -d
 * > docker-compose exec st2actionrunner bash 
-  * IMPORTANTE - (need to run as root or just copy sshkey to /root/.ssh/)
+  * IMPORTANTE - (need to run as root or just copy sshkey to /root/.ssh/) *AND* from sudo -i do a local git clone to get value for "known_hosts"
   * ==>  check:  sshkey need to be owned by the user -- NOT root
   * ==> sudo -i ==>  cd /root ==> ssh-keygen (accept all) 
   * ==> copy .pub public key ==> gren to git in next step
