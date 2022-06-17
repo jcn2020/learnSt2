@@ -15,7 +15,7 @@ criteria:
     type: "equals"
 
 action:
-  ref: "core.cmd"
+  ref: "core.local"
   parameters:
     cmd: "echo 'what I can do'"
 
