@@ -15,7 +15,7 @@ criteria:
     type: "equals"
 
 action:
-  ref: "learnst2.say_hello"
+  ref: "core.cmd"
   parameters:
-    greetings: "echo 'what I can do'"
+    cmd: "echo 'what I can do'"
 
