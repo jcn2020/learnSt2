@@ -6,7 +6,7 @@ enabled: true
 trigger:
     type: learnst2.event1
 action:
-    ref: learnst2.say_hello`
+    ref: learnst2.say_hello
     parameters:
         greetings: "Hello darkness my old friends"
 

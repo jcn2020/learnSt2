@@ -1,5 +1,5 @@
 ---
-name: 001_webhook_trigger.yaml
+name: 001_webhook_trigger
 pack: learnst2
 description: "simple rule"
 enabled: true
