@@ -20,5 +20,5 @@ tasks:
       message: "<% ctx().name %>  and <% ctx().location %>"
     next:
       - when <% succeeded() %>
-        publish: notused="{{action_context.location}}"
+        publish: notused="hello"
 
