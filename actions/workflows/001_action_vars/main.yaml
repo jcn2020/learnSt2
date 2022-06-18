@@ -12,6 +12,7 @@ vars:
 output: 
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
+  - myNotUsed: <% ctx.notUsed %>
 
 tasks:
   diplay_vars:
