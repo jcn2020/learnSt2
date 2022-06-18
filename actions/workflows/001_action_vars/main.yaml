@@ -21,5 +21,5 @@ tasks:
       message: "<% ctx().name %>  and <% ctx().location %>"
     next:
       - when: <% succeeded() %>
-        publish: notUsed="{{ context_action.location }}"
+        publish: notUsed="{{ action_context.location }}"
 
