@@ -12,4 +12,14 @@ parameters:
     type: "string"
     required: true
     secret: false
-    default: "anything goes for now"
+    default: "Me"
+    position: 0
+    
+  location:
+    type: "string"
+    required: true
+    secret: false
+    default: "SSC"
+
+  
+

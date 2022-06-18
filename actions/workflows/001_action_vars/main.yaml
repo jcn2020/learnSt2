@@ -4,15 +4,17 @@ description: available vars
 
 input:
   - name
+  - location
 
 vars:
-  - location: "never used"
+  - notUsed: "never used"
 
 output: 
-  - myLocation: <% ctx().name %>
+  - myName: <% ctx().name %>
+  - myLocation: <% ctx().location %>
 
 tasks:
   diplay_vars:
     action: core.echo
     input:
-      message: <% ctx().name %> 
+      message: <% ctx().name %>  and <% ctx().location %>
