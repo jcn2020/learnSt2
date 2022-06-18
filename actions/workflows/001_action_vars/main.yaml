@@ -18,4 +18,4 @@ tasks:
     action: core.echo
     input:
       # message: <% ctx().name %>  and <% ctx().location %>
-      message: <% ctx().name %>  and {{ action_context.location }}
+      message: {{ action_context.location }}
