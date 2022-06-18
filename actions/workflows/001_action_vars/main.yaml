@@ -22,6 +22,6 @@ tasks:
     next:
       - when: <% succeeded() %>
         # publish: notUsed="{{action_context.location}}"
-        publish: notUsed="{{ctx().location}}"
+        publish: notUsed="{% ctx().location %}"
         
 
