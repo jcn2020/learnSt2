@@ -9,6 +9,14 @@ input:
 vars:
   - notUsed: "never used"
 
+output_schema: 
+  myName:
+    type: "string"
+    required: true
+  myLocation:
+    type: "string"
+    required: true
+
 output: 
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
