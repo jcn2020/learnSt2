@@ -19,6 +19,6 @@ tasks:
     input:
       message: "<% ctx().name %>  and <% ctx().location %>"
     next:
-      - when <% succeeded() %>
+      - when: <% succeeded() %>
         publish: notUsed="hello"
 
