@@ -21,12 +21,15 @@ vars:
 #  myNotUsed:
 #    type: "string"
 
+
 output: 
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
-#  - myLevel: {{ ctx().levels }} 
-#  - myConfirmation: {{ ctx().confirmation }}
+  - myLevel: "{{ ctx().levels }}"
+  - myConfirmation: "{{ ctx().confirmation }}" 
+  = myDayOfWeek: <% ctx().dayOfWeek %>
   - myNotUsed: <% ctx().notUsed %>
+
 
 tasks:
   diplay_vars:

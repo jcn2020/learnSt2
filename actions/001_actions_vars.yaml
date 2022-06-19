@@ -27,3 +27,17 @@ parameters:
   confirmation:
     type: boolean
     default: true
+
+  dayOfWeek:
+    type: string
+    enum:
+      - Mon 
+      - Tue 
+      - Wed 
+      - Thu 
+      - Fri 
+      - Sat 
+      - Sun
+    default: "Sat"
+
+  
