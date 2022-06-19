@@ -28,6 +28,3 @@ parameters:
   confirmation:
     type: boolean
     default: true
-
-  
-
