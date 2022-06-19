@@ -9,20 +9,20 @@ input:
 vars:
   - notUsed: "never used"
 
-output_schema: 
-  myName: 
-    type: "string"
-    required: true
-  myLocation: 
-    type: "string"
-  myNotUsed:
-    type: "string"
-
 # don't know how to use it
-#output: 
-#  - myName: <% ctx().name %>
-#  - myLocation: <% ctx().location %>
-#  - myNotUsed: <% ctx().notUsed %>
+#output_schema: 
+#  myName: 
+#    type: "string"
+#    required: true
+#  myLocation: 
+#    type: "string"
+#  myNotUsed:
+#    type: "string"
+
+output: 
+  - myName: <% ctx().name %>
+  - myLocation: <% ctx().location %>
+  - myNotUsed: <% ctx().notUsed %>
 
 tasks:
   diplay_vars:
