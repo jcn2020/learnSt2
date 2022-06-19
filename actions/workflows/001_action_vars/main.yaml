@@ -23,12 +23,12 @@ vars:
 #    type: "string"
 
 
-output: 
+output:
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
   - myLevel: "{{ ctx().levels }}"
   - myConfirmation: "{{ ctx().confirmation }}" 
-  = myDayOfWeek: <% ctx().dayOfWeek %>
+  - myDayOfWeek: <% ctx().dayOfWeek %>
   - myNotUsed: <% ctx().notUsed %>
 
 
