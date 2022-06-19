@@ -25,7 +25,7 @@ output:
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
 #  - myLevel: {{ ctx().levels }} 
-  - myConfirmation: {{ ctx().confirmation }}
+#  - myConfirmation: {{ ctx().confirmation }}
   - myNotUsed: <% ctx().notUsed %>
 
 tasks:
