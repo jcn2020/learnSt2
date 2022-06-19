@@ -3,7 +3,6 @@ name: 001_actions_vars
 # pack
 description: vars from application_context, config_context
 enabled: true
-
 entry_point: workflows/001_action_vars/main.yaml
 runner_type: orquesta
 
