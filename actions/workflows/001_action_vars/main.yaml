@@ -38,7 +38,7 @@ tasks:
       items: <% ctx().levels %>
     action: core.echo
     input:
-      message: "<% item() %> and ctx().name %>  and <% ctx().location %>"
+      message: "<% item() %> and <% ctx().name %>  and <% ctx().location %>"
     next:
       - when: <% succeeded() %>
         # publish: notUsed="{{action_context.location}}"
