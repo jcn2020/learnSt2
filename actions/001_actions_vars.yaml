@@ -23,9 +23,7 @@ parameters:
 
   levels:
     type: array
-    items: 
-      type: string
-    default: ["prod" "test" "stage"]
+    default: ["prod", "test", "stage"]
 
 
   confirmation:
