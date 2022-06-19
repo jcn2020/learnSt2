@@ -21,5 +21,16 @@ parameters:
     secret: false
     default: "SSC"
 
+  levels:
+    type: array
+    items: 
+      type: string
+      default: ["prod", "test", "stage"]
+
+
+  confirmation:
+    type: boolean
+    default: true
+
   
 

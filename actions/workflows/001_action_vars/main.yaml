@@ -5,6 +5,8 @@ description: available vars
 input:
   - name
   - location
+  - levels
+  - confirmation
 
 vars:
   - notUsed: "never used"
@@ -22,6 +24,8 @@ vars:
 output: 
   - myName: <% ctx().name %>
   - myLocation: <% ctx().location %>
+  - myLevel: {{ ctx().levels }} 
+  - myConfirmation: {{ ctx().confirmation }}
   - myNotUsed: <% ctx().notUsed %>
 
 tasks:
