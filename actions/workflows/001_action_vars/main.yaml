@@ -34,9 +34,11 @@ output:
 
 tasks:
   diplay_vars:
+    with:
+      items: <% ctx().levels %>
     action: core.echo
     input:
-      message: "<% ctx().name %>  and <% ctx().location %>"
+      message: "<% item() %> and ctx().name %>  and <% ctx().location %>"
     next:
       - when: <% succeeded() %>
         # publish: notUsed="{{action_context.location}}"
