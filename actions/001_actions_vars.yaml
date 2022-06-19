@@ -23,8 +23,7 @@ parameters:
 
   levels:
     type: array
-    default: ["prod", "test", "stage"]
-
+    default: ["prod","test","stage"]
 
   confirmation:
     type: boolean
