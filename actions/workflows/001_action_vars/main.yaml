@@ -18,11 +18,11 @@ output_schema:
   myNotUsed:
     type: "string"
 
-
-output: 
-  - myName: <% ctx().name %>
-  - myLocation: <% ctx().location %>
-  - myNotUsed: <% ctx().notUsed %>
+# don't know how to use it
+#output: 
+#  - myName: <% ctx().name %>
+#  - myLocation: <% ctx().location %>
+#  - myNotUsed: <% ctx().notUsed %>
 
 tasks:
   diplay_vars:
