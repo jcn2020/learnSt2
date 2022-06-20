@@ -37,7 +37,7 @@ output:
   - myDayOfWeek: <% ctx().dayOfWeek %>
 #  - myPackageOwner: "{{config_context.api_key}}"
   - myNotUsed: <% ctx().notUsed %>
-  - myResult: <% task(display_vars).result.result %>
+  - myResult: <% task(display_vars).result %>
 
 
 
