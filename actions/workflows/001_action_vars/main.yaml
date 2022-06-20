@@ -29,7 +29,9 @@ output:
   - myLevel: "{{ ctx().levels }}"
   - myConfirmation: "{{ ctx().confirmation }}" 
   - myDayOfWeek: <% ctx().dayOfWeek %>
-  - myNotUsed: <% ctx().notUsed %>
+  - myPackageOwner: <% config_context.package_owner %>
+  - myNotUsed: <% ctx().notU`sed %>
+
 
 
 tasks:
