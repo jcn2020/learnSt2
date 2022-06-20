@@ -30,7 +30,7 @@ output:
   - myConfirmation: "{{ ctx().confirmation }}" 
   - myDayOfWeek: <% ctx().dayOfWeek %>
   - myPackageOwner: <% config_context.package_owner %>
-  - myNotUsed: <% ctx().notU`sed %>
+  - myNotUsed: <% ctx().notUsed %>
 
 
 
