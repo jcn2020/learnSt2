@@ -45,7 +45,7 @@ output:
 # Workflow tasks to complete
 #############################################
 tasks:
-  diplay_vars:
+  display_vars:
     with:
       items: <% ctx().levels %>
     action: core.echo
