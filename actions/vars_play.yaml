@@ -1,5 +1,5 @@
 ---
-name: 001_actions_vars
+name: vars_play
 # pack
 description: vars from application_context, config_context
 enabled: true
