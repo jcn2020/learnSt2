@@ -35,8 +35,9 @@ output:
   - myLevel: "{{ ctx().levels }}"
   - myConfirmation: "{{ ctx().confirmation }}" 
   - myDayOfWeek: <% ctx().dayOfWeek %>
-  - myPackageOwner: "{{config_context.api_key}}"
+#  - myPackageOwner: "{{config_context.api_key}}"
   - myNotUsed: <% ctx().notUsed %>
+  - myResult: <% task(display_vars).result %>
 
 
 
