@@ -9,6 +9,9 @@ input:
   - confirmation
   - dayOfWeek 
 
+#############################################
+#  Variables published by workflow on success
+#############################################
 vars:
   - notUsed: "never used"
 
@@ -22,6 +25,9 @@ vars:
 #  myNotUsed:
 #    type: "string"
 
+#############################################
+# Output at the end of the workflow
+#############################################
 
 output:
   - myName: <% ctx().name %>
@@ -34,6 +40,9 @@ output:
 
 
 
+#############################################
+# Workflow tasks to complete
+#############################################
 tasks:
   diplay_vars:
     with:

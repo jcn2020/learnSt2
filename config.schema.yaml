@@ -2,10 +2,12 @@
 api_key:
   type: "string"
   required: true
+  default: "apikey"
   description: "API Key"
 api_secret:
   type: "string"
   required: true
+  default: "api_secret"
   secret: true
 region:
   type: "string"
@@ -15,4 +17,5 @@ region:
 private_key_path:
   type: "string"
   required: false
+  default: "path/to/nowhere"
   description: "Path to the private key file to use"
