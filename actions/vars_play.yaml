@@ -6,6 +6,12 @@ enabled: true
 entry_point: workflows/vars_play/main.yaml
 runner_type: orquesta
 
+output_schema:
+  myName:
+    type: string
+  myLocation:
+    type: string
+
 parameters:
   name:
     type: "string"
