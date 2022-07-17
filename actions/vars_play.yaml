@@ -48,6 +48,6 @@ parameters:
       - Fri 
       - Sat 
       - Sun
-    default: "Sat"
+    default: "Sun"
 
   
