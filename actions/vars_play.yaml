@@ -11,6 +11,10 @@ output_schema:
     type: string
   myLocation:
     type: boolean
+    required: true
+  myNothing:
+    type: string
+    required: true
 
 parameters:
   name:
