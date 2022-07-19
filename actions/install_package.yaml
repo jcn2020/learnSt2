@@ -4,11 +4,11 @@ description:  install a pack
 enabled: true
 
 runner_type: orquesta
-entry_point: workflows/install_pack/main.yaml
+entry_point: workflows/install_package/main.yaml
 
 parameters:
   git_source:
     type: string
-    default: git@github.com:jcn2020/g_test.git
-    required: true
+    default: git@github.com:jcn2020/g_test.git=master
+  
     
