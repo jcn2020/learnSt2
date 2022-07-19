@@ -23,8 +23,8 @@ tasks:
       packs: <% ctx().git_packs %>
     next: 
       - when: <% succeeded() %>
-        publish:
-          - status: "[status] pass uninstall_pack"
+    #    publish:
+    #      - status: "[status] pass uninstall_pack"
         do:
           - install_pack
 
