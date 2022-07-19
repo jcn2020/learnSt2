@@ -6,21 +6,47 @@ input:
   - git_packs
 
 vars:
-  - error_code: 'nil'
+  - status: 'nil'
   - pack_ref_name: 
       - "g_test"
+  - msg: "Hello Test"
 
 output: 
   - mysource: <% ctx().git_packs %>
   - myErrCode: <% ctx().error_code %>
 
 tasks:
-  install_package:
+  # task to check if installed? 
+  uninstall_pack:
     action: packs.uninstall
+    input: 
+      packs: <% ctx().git_packs %>
+    next: 
+      - when <% succeeded() %>
+        publish:
+          - status: "[status] pass uninstall_pack"
+        do:
+          - install_pack
+
+  install_pack:
+    action: packs.install
     input:  
-      # packs: <% ctx().git_packs %>
       packs: <% ctx().pack_ref_name %>
     next:
       - when: <% succeeded() %> 
         publish:
-          - error_code: '50'
+          - status: "[status] pass install_pack"
+        do: 
+          - run_action
+
+  run_action:
+    action: g_test.hello_world
+    input: 
+      my_message: <% ctx().msg %> 
+    next:
+      - when: <% succeeded() %>
+        publish: 
+          - status: "[status] pass run_action"
+      - when: <% failed() %> 
+        publish:
+          - status: "[status] failed run_action"
