@@ -12,8 +12,8 @@ vars:
   - msg: "Hello Test"
 
 output: 
-  - mysource: <% ctx().git_packs %>
-  - myErrCode: <% ctx().error_code %>
+  - mySource: <% ctx().git_packs %>
+  - myStatus: <% ctx().status %>
 
 tasks:
   # task to check if installed? 
@@ -40,7 +40,7 @@ tasks:
           - run_action
 
   run_action:
-    action: g_test.hello_world
+    action: g_test.hello
     input: 
       my_message: <% ctx().msg %> 
     next:
