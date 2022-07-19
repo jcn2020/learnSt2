@@ -3,13 +3,13 @@ version: 1.0
 description: install package 
 
 input: 
-  - git_source
+  - git_packs
 
 vars:
   - error_code: 'nil'
 
 output: 
-  - mysource: <% ctx().git_source %>
+  - mysource: <% ctx().git_packs %>
   - myErrCode: <% ctx().error_code %>
 
 tasks:
