@@ -36,7 +36,7 @@ tasks:
       - when: <% succeeded() %> 
         publish:
           - status: "[status] pass install_pack"
-        do: 
+#        do: 
 #          - run_action
 #
 #  run_action:
