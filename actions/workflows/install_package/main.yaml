@@ -1,0 +1,24 @@
+---
+version: 1.0
+description: install package 
+
+input: 
+  - git_source 
+
+vars:
+  - error_code
+
+output: 
+  - mysource: <% ctx().git_source %>
+  - myErrCode: <% ctx().error_code %>
+
+tasks:
+  install_package:
+    action: pack.install
+    input:  
+      - packs: git@github.com:jcn2020/g_test.git
+    next:
+      - when: <% succeeded() %> 
+        publish:
+          error_code: 50
+      
