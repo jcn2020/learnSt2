@@ -14,7 +14,7 @@ output:
 
 tasks:
   install_package:
-    action: packs.install
+    action: packs.uninstall
     input:  
       packs: <% ctx().git_source %>
     next:
