@@ -3,7 +3,7 @@ version: 1.0
 description: install package 
 
 input: 
-  - git_packs
+  - git_source
 
 vars:
   - error_code: 'nil'
