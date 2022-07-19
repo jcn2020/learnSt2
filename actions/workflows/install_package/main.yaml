@@ -22,7 +22,7 @@ tasks:
     input: 
       packs: <% ctx().git_packs %>
     next: 
-      - when <% succeeded() %>
+      - when: <% succeeded() %>
         publish:
           - status: "[status] pass uninstall_pack"
         do:
