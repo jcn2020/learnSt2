@@ -8,7 +8,8 @@ entry_point: workflows/install_package/main.yaml
 
 parameters:
   git_source:
-    type: string
-    default: git@github.com:jcn2020/g_test.git=master
+    type: array
+    default: 'git@github.com:jcn2020/g_test.git=master'
+
   
     

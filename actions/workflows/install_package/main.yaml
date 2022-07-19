@@ -6,7 +6,7 @@ input:
   - git_source 
 
 vars:
-  - error_code
+  - error_code: 'nil'
 
 output: 
   - mysource: <% ctx().git_source %>
@@ -16,7 +16,7 @@ tasks:
   install_package:
     action: packs.install
     input:  
-      - packs: ['git@github.com:jcn2020/g_test.git=master']
+      - packs: <% ctx().git_source %>
     next:
       - when: <% succeeded() %> 
         publish:
