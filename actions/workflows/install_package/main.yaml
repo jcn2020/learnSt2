@@ -16,7 +16,8 @@ tasks:
   install_package:
     action: packs.uninstall
     input:  
-      packs: <% ctx().git_packs %>
+      # packs: <% ctx().git_packs %>
+      packs: "g_test"
     next:
       - when: <% succeeded() %> 
         publish:
