@@ -39,8 +39,10 @@ output:
 #  - myActionContextUser: <% action_context.user %>
 #  - myActionContextPack: <% action_context.pack %>
   - myKeyValue: <% action_context.a %>
+#  - myKeyValue: "testing"
   - myNotUsed: <% ctx().notUsed %>
   - myResult: <% task(display_vars).result.items.result.return_code %>
+  
 
 
 
