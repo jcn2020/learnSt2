@@ -16,9 +16,8 @@ tasks:
   install_package:
     action: packs.install
     input:  
-      - packs: "git@github.com:jcn2020/g_test.git=master"
+      - packs: ['git@github.com:jcn2020/g_test.git=master']
     next:
       - when: <% succeeded() %> 
         publish:
-          - error_code: 50
-      
+          - error_code: '50'
