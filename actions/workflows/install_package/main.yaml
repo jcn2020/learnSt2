@@ -31,7 +31,7 @@ tasks:
   install_pack:
     action: packs.install
     input:  
-      packs: <% ctx().git_packs %>
+      packs: {{ ctx().git_packs }}
     next:
       - when: <% succeeded() %> 
         publish:
