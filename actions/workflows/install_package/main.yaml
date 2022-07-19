@@ -16,7 +16,7 @@ tasks:
   install_package:
     action: packs.install
     input:  
-      - packs: <% ctx().git_source %>
+      packs: <% ctx().git_source %>
     next:
       - when: <% succeeded() %> 
         publish:
