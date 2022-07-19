@@ -37,4 +37,16 @@ tasks:
         publish:
           - status: "[status] pass install_pack"
         do: 
-          - run_action
+#          - run_action
+#
+#  run_action:
+#    action: g_test.hello
+#    input: 
+#      my_message: <% ctx().msg %> 
+#    next:
+#      - when: <% succeeded() %>
+#        publish: 
+#          - status: "[status] pass run_action"
+#      - when: <% failed() %> 
+#        publish:
+#          - status: "[status] failed run_action"
