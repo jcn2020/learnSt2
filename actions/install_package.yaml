@@ -7,7 +7,7 @@ runner_type: orquesta
 entry_point: workflows/install_package/main.yaml
 
 parameters:
-  git_source:
+  git_packs:
     type: array
     default: 
       - 'git@github.com:jcn2020/g_test.git=master'

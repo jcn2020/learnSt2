@@ -3,7 +3,7 @@ version: 1.0
 description: install package 
 
 input: 
-  - git_source 
+  - git_packs
 
 vars:
   - error_code: 'nil'
@@ -16,7 +16,7 @@ tasks:
   install_package:
     action: packs.uninstall
     input:  
-      packs: <% ctx().git_source %>
+      packs: <% ctx().git_packs %>
     next:
       - when: <% succeeded() %> 
         publish:
