@@ -40,7 +40,7 @@ tasks:
           - run_action
 
   run_action:
-    action: learnst2.action_run
+    action: g_test.hello_world
     input: 
       my_message: <% ctx().msg %> 
     next:
