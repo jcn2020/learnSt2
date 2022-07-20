@@ -47,9 +47,13 @@ tasks:
       - when: <% succeeded() %>
         publish: 
           - status: "[status] pass run_action"
+        do:
+          - clean_up
       - when: <% failed() %> 
         publish:
           - status: "[status] failed run_action"
+        do:
+          - clean_up
 
   clean_up:
     action: packs.uninstall
