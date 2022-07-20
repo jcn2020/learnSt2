@@ -1,6 +1,6 @@
 ---
 version: 1.0
-description: install package 
+description: deploy packs
 
 input: 
   - git_packs
@@ -50,3 +50,15 @@ tasks:
       - when: <% failed() %> 
         publish:
           - status: "[status] failed run_action"
+
+  clean_up:
+    action: packs.uninstall
+    input:
+      packs: <% ctx().pack_ref_name
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - status: "[status] completed clean up]"
+      - when: <5 failed() %> 
+        publish: 
+          - status: "[status] failed clean up"
