@@ -1,11 +1,11 @@
 ---
-name: actioin_run
+name: action_run
 # pack
-description: run an actioin 
+description: run an action 
 enabled: true
 
 runner_type: orquesta
-entry_point: workflows/say_hellow.yaml
+entry_point: workflows/action_run.yaml
 
 parameters:
   greetings:
