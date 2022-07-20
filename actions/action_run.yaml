@@ -1,0 +1,14 @@
+---
+name: actioin_run
+# pack
+description: run an actioin 
+enabled: true
+
+runner_type: orquesta
+entry_point: workflows/say_hellow.yaml
+
+parameters:
+  greetings:
+    type: string
+    default: "Hello World"
+    required: true
