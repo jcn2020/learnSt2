@@ -72,7 +72,7 @@ tasks:
     action: core.cmd
     input:
       cmd: "st2 pack list"
-    next: 
-      - when: <% succeeded() %>
-        publish:
-          -status: <% task(list_packs).result %>
+    # next: 
+    #   - when: <% succeeded() %>
+    #     publish:
+    #       -status: <% ctx(list_packs).result %>
