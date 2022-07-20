@@ -23,8 +23,8 @@ tasks:
       packs: <% ctx().pack_ref_name %>
     next: 
       - when: <% succeeded() %>
-        publish:
-          - status: "[status] pass uninstall_pack"
+    #    publish:
+    #      - status: "[status] pass uninstall_pack"
         do:
           - install_pack
 
