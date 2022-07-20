@@ -71,7 +71,7 @@ tasks:
   list_packs:
     action: core.local
     input:
-      cmd: "st2 pack list"
+      cmd: "st2 login st2admin -p ChangeMe; st2 1pack list"
     # next: 
     #   - when: <% succeeded() %>
     #     publish:
