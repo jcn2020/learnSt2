@@ -40,7 +40,7 @@ tasks:
           - run_action
 
   run_action:
-    action: g_test.hello_world
+    action: learnst2.action_run
     input: 
       my_message: <% ctx().msg %> 
     next:
@@ -58,7 +58,8 @@ tasks:
   clean_up:
     action: packs.uninstall
     input:
-      packs: <% ctx().pack_ref_name %>
+      # packs: <% ctx().pack_ref_name %>
+      packs: <% ctx().git_packs %>
     next:
       - when: <% succeeded() %>
         publish:
