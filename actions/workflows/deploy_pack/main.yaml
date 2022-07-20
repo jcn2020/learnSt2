@@ -49,12 +49,12 @@ tasks:
           - status: "[status] pass run_action"
         do:
           - clean_up
+          - list_packs
       - when: <% failed() %> 
         publish:
           - status: "[status] failed run_action"
         do:
           - clean_up
-          - list_packs
 
   clean_up:
     action: packs.install
