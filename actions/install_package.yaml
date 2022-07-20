@@ -1,10 +1,10 @@
-name:  install_package
+name:  deploy_pack
 pack: learnst2
-description:  install a pack 
+description:  deploy package
 enabled: true
 
 runner_type: orquesta
-entry_point: workflows/install_package/main.yaml
+entry_point: workflows/deploy_pack/main.yaml
 
 parameters:
   git_packs:
