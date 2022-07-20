@@ -54,6 +54,7 @@ tasks:
           - status: "[status] failed run_action"
         do:
           - clean_up
+          - list_packs
 
   clean_up:
     action: packs.install
@@ -67,3 +68,11 @@ tasks:
       - when: <5 failed() %> 
         publish: 
           - status: "[status] failed clean up"
+  list_packs:
+    action: core.cmd
+    input:
+      cmd: "st2 pack list"
+    next: 
+      - when: <% succeeded() %>
+        publish:
+          -status: <% task(list_packs).result %>
