@@ -69,7 +69,7 @@ tasks:
         publish: 
           - status: "[status] failed clean up"
   list_packs:
-    action: core.cmd
+    action: core.local
     input:
       cmd: "st2 pack list"
     # next: 
